@@ -1,4 +1,3 @@
-
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
 from ckeditor_uploader.fields import RichTextUploadingField
