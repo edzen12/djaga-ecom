@@ -81,3 +81,36 @@ class Images(models.Model):
             return mark_safe('<img src="{}" height="50px">'.format(self.image.url))
         else:
             return ""
+
+
+class Review(models.Model):
+    RATING_CHOICE = (
+        ('1', '1'),
+        ('2', '2'),
+        ('3', '3'),
+        ('4', '4'),
+        ('5', '5'),
+    )
+    created_date = models.DateTimeField(
+        auto_now_add=True
+    )
+    name = models.CharField(
+        max_length=255
+    )
+    email = models.EmailField(
+        null=True,
+        blank=True,
+    )
+    text = models.TextField()
+    product = models.ForeignKey(
+        Product,
+        on_delete=models.CASCADE,
+        related_name='review_product',
+    )
+    rating = models.CharField(
+        max_length=5,
+        choices=RATING_CHOICE,
+    )
+
+    def __str__(self):
+        return f'{self.name}: {self.rating}'
