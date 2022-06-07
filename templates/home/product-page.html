@@ -1,5 +1,18 @@
 {% extends 'homebase.html' %}
 {% block main %}
+
+<!-- breadcrumb -->
+<div id="breadcrumb">
+	<div class="container">
+		<ul class="breadcrumb">
+			<li><a href="#">Главная</a></li>
+			<li><a href="#">{{product.category.title}}</a></li> 
+			<li class="active">{{product.title}}</li>
+		</ul>
+	</div>
+</div>
+<!-- breadcrumb -->
+
 <!-- section -->
 <div class="section">
 	<!-- container -->

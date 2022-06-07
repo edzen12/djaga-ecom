@@ -11,8 +11,7 @@
                 <div class="banner banner-1">
                     <img src="{{prod_slid.image.url}}" height="400px" style="object-fit:cover" alt="">
                     <div class="banner-caption">
-                        <h1 class="primary-color">{{prod_slid.title}}<br><span class="white-color font-weak">{{prod_slid.price}}</span></h1>
-                        <a href="" class="primary-btn">купить</a>
+                        <a href="{% url 'product_detail' prod_slid.slug %}" class="primary-btn">посмотреть</a>
                     </div>
                 </div>
                 <!-- /banner -->
