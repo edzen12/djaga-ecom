@@ -13,7 +13,9 @@ def homepageview(request):
         key_word = request.GET.get('key_word')
         product_slider = Product.objects.filter(Q(title__icontains=key_word))
         return render(request, 'index.html', locals())
-    product_slider = Product.objects.all()
+    product_slider = Product.objects.all() # товары для слайдера
+    product_last = Product.objects.all().order_by('-id')[:4] # послдение добавленные товары
+    product_random = Product.objects.all().order_by('?')[:4] # рандомные товары
     return render(request, 'index.html', locals())
 
 

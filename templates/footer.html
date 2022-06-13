@@ -9,8 +9,8 @@
                 <div class="footer">
                     <!-- footer logo -->
                     <div class="footer-logo">
-                        <a class="logo" href="#">
-                <img src="./img/logo.png" alt="">
+                        <a class="logo" href="{% url 'homepage' %}">
+                <img src="{{settings.logo.url}}" alt="">
               </a>
                     </div>
                     <!-- /footer logo -->
@@ -19,11 +19,11 @@
 
                     <!-- footer social -->
                     <ul class="footer-social">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="{{settings.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="{{settings.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="{{settings.instagram}}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://t.me/{{settings.telegram}}" target="_blank"><i class="fa fa-telegram"></i></a></li>
+                        <li><a href="mailto:{{settings.email}}" target="_blank"><i class="fa fa-envelope"></i></a></li>
                     </ul>
                     <!-- /footer social -->
                 </div>
