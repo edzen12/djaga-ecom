@@ -40,6 +40,7 @@ class Category(MPTTModel):
     class MPTTMeta:
         order_insertion_by = ['title']
 
+
 class Product(models.Model):
     STATUS_CHOICES = (
         ('True', 'True'),

@@ -1,0 +1,14 @@
+{% extends 'homebase.html' %}
+{% block main %}
+<div class="container">
+    <form method="post" enctype="multipart/form-data" action="{% url 'user_register' %}">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="row">
+            {{ field.label_tag }}{{ field }}
+        </div>
+        {% endfor %}
+        <button class="btn btn-success" type="submit">Регистрация</button>
+    </form>
+</div>
+{% endblock %}
